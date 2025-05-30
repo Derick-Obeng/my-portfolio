@@ -4,7 +4,8 @@
 import { z } from "zod";
 import { enhanceDescription as enhanceDescriptionFlow, type EnhanceDescriptionInput } from "@/ai/flows/enhance-description";
 
-export const enhanceDescriptionSchema = z.object({
+// Made enhanceDescriptionSchema a local constant
+const enhanceDescriptionSchema = z.object({
   description: z.string().min(10, { message: "Description must be at least 10 characters." }).max(2000, { message: "Description must be at most 2000 characters." }),
 });
 
