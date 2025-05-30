@@ -1,6 +1,6 @@
 "use client";
 
-import { useFormState, useFormStatus } from "react-dom";
+import { useActionState, useFormStatus } from "react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -27,7 +27,7 @@ function EnhanceButton() {
 }
 
 export function DescriptionEnhancer() {
-  const [state, formAction] = useFormState(enhanceDescriptionAction, initialState);
+  const [state, formAction] = useActionState(enhanceDescriptionAction, initialState);
   const { toast } = useToast();
   const [originalDescription, setOriginalDescription] = useState("");
 
