@@ -10,7 +10,7 @@ export default function HomePage() {
       <div className="relative z-0 px-4 py-8 sm:px-6 md:px-8 w-full">
         <ScrollingName name="Derrick Obeng" />
         
-        <div className="max-w-2xl mx-auto mt-8 p-6 bg-card/80 backdrop-blur-sm rounded-xl shadow-2xl">
+        <div className="max-w-2xl mx-auto mt-8 p-6 bg-card/25 dark:bg-card/25 backdrop-blur-md rounded-xl shadow-2xl border border-white/20 dark:border-white/10">
           <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl mb-6">
             Hello, welcome to my portfolio
           </h2>
