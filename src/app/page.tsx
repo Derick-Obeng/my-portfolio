@@ -1,4 +1,5 @@
 
+
 import { Button } from "@/components/ui/button";
 import { ScrollingName } from "@/components/home/ScrollingName";
 import Link from "next/link";
@@ -8,7 +9,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-1 flex-col relative py-8 md:py-12">
       {/* Fading Graph Lines Effect - Top Left */}
-      <div className="absolute top-4 left-4 md:top-8 md:left-8 w-32 h-32 md:w-40 md:h-40 pointer-events-none opacity-50">
+      <div className="absolute top-4 left-4 md:top-8 md:left-8 w-32 h-32 md:w-40 md:h-40 pointer-events-none opacity-60">
         <svg width="100%" height="100%" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="lineFadeGradientLeft" x1="100%" y1="100%" x2="0%" y2="0%">
@@ -21,14 +22,14 @@ export default function HomePage() {
             </linearGradient>
           </defs>
           {/* Vertical Lines */}
-          <line x1="30" y1="10" x2="30" y2="140" stroke="url(#lineFadeGradientLeft)" strokeWidth="1.5" className="text-primary"/>
-          <line x1="70" y1="10" x2="70" y2="140" stroke="url(#lineFadeGradientLeft)" strokeWidth="1" className="text-accent"/>
-          <line x1="110" y1="10" x2="110" y2="140" stroke="url(#lineFadeGradientLeft)" strokeWidth="1.5" className="text-primary"/>
+          <line x1="30" y1="10" x2="30" y2="140" stroke="url(#lineFadeGradientLeft)" strokeWidth="2" className="text-primary"/>
+          <line x1="70" y1="10" x2="70" y2="140" stroke="url(#lineFadeGradientLeft)" strokeWidth="1.5" className="text-accent"/>
+          <line x1="110" y1="10" x2="110" y2="140" stroke="url(#lineFadeGradientLeft)" strokeWidth="2" className="text-primary"/>
           
           {/* Horizontal Lines */}
-          <line x1="10" y1="30" x2="140" y2="30" stroke="url(#lineFadeGradientLeft)" strokeWidth="1.5" className="text-accent"/>
-          <line x1="10" y1="70" x2="140" y2="70" stroke="url(#lineFadeGradientLeft)" strokeWidth="1" className="text-primary"/>
-          <line x1="10" y1="110" x2="140" y2="110" stroke="url(#lineFadeGradientLeft)" strokeWidth="1.5" className="text-accent"/>
+          <line x1="10" y1="30" x2="140" y2="30" stroke="url(#lineFadeGradientLeft)" strokeWidth="2" className="text-accent"/>
+          <line x1="10" y1="70" x2="140" y2="70" stroke="url(#lineFadeGradientLeft)" strokeWidth="1.5" className="text-primary"/>
+          <line x1="10" y1="110" x2="140" y2="110" stroke="url(#lineFadeGradientLeft)" strokeWidth="2" className="text-accent"/>
         </svg>
       </div>
 
@@ -96,3 +97,4 @@ export default function HomePage() {
     </div>
   );
 }
+
