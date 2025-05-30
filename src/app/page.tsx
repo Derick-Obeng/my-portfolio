@@ -34,25 +34,26 @@ export default function HomePage() {
         <ScrollingName name="Derrick Obeng" />
       </div>
       
-      <div className="w-full max-w-2xl mx-auto mt-8 text-left">
-        <div 
-          className="p-6 rounded-lg bg-gradient-to-br from-primary/10 via-secondary/5 to-transparent shadow-lg"
-        >
-          <p className="mb-8 text-lg text-muted-foreground">
-            Craft and showcase your professional journey. Display your projects, skills, and bio with elegance and clarity. Let FolioForge help you make a lasting impression.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-start items-start sm:items-center gap-4">
-            <Button asChild size="lg" className="shadow-md hover:shadow-lg transition-shadow">
-              <Link href="/projects">
-                View My Work <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="shadow-md hover:shadow-lg transition-shadow">
-              <Link href="/contact">
-                Get In Touch
-              </Link>
-            </Button>
-          </div>
+      {/* Updated section with splash background, card appearance removed */}
+      <div 
+        className="w-full max-w-2xl mx-auto mt-8 text-left p-6 
+                   bg-gradient-to-br from-primary/5 via-secondary/2 to-transparent/0
+                   dark:from-primary/10 dark:via-secondary/5"
+      >
+        <p className="mb-8 text-lg text-muted-foreground">
+          Craft and showcase your professional journey. Display your projects, skills, and bio with elegance and clarity. Let FolioForge help you make a lasting impression.
+        </p>
+        <div className="flex flex-col sm:flex-row justify-start items-start sm:items-center gap-4">
+          <Button asChild size="lg" className="shadow-md hover:shadow-lg transition-shadow">
+            <Link href="/projects">
+              View My Work <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
+          <Button asChild variant="outline" size="lg" className="shadow-md hover:shadow-lg transition-shadow">
+            <Link href="/contact">
+              Get In Touch
+            </Link>
+          </Button>
         </div>
       </div>
 
