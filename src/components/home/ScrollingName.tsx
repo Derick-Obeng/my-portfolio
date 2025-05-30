@@ -27,10 +27,8 @@ export function ScrollingName({ name }: ScrollingNameProps) {
 
   const nameContent = (
     <>
-      <span className="text-primary"> • </span>
       <span className="text-primary">{firstName}</span>
       {lastName && <span className="text-primary">&nbsp;{lastName}</span>}
-      <span className="text-primary"> • </span>
     </>
   );
 
