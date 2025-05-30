@@ -7,7 +7,23 @@ import { ArrowRight } from "lucide-react";
 export default function HomePage() {
   return (
     <div className="flex flex-1 flex-col relative py-8 md:py-12">
-      
+      {/* Fading Graph Lines Effect - Top Right */}
+      <div className="absolute top-4 right-4 md:top-8 md:right-8 w-48 h-48 pointer-events-none opacity-60">
+        <svg width="100%" height="100%" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="lineFadeGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="currentColor" stopOpacity="0.7"/>
+              <stop offset="100%" stopColor="currentColor" stopOpacity="0"/>
+            </linearGradient>
+          </defs>
+          
+          <line x1="50" y1="190" x2="190" y2="50" stroke="url(#lineFadeGradient)" strokeWidth="2.5" className="text-primary"/>
+          <line x1="80" y1="190" x2="180" y2="80" stroke="url(#lineFadeGradient)" strokeWidth="1.5" className="text-accent"/>
+          <line x1="110" y1="190" x2="170" y2="110" stroke="url(#lineFadeGradient)" strokeWidth="2" className="text-primary opacity-90"/>
+          <line x1="130" y1="190" x2="160" y2="150" stroke="url(#lineFadeGradient)" strokeWidth="1" className="text-accent opacity-80"/>
+        </svg>
+      </div>
+
       <div className="w-full max-w-2xl mx-auto text-left">
         <p className="text-lg text-muted-foreground mb-4">
           Hello, welcome to my portfolio
@@ -19,20 +35,24 @@ export default function HomePage() {
       </div>
       
       <div className="w-full max-w-2xl mx-auto mt-8 text-left">
-        <p className="mb-8 text-lg text-muted-foreground">
-          Craft and showcase your professional journey. Display your projects, skills, and bio with elegance and clarity. Let FolioForge help you make a lasting impression.
-        </p>
-        <div className="flex flex-col sm:flex-row justify-start items-start sm:items-center gap-4">
-          <Button asChild size="lg" className="shadow-md hover:shadow-lg transition-shadow">
-            <Link href="/projects">
-              View My Work <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
-          <Button asChild variant="outline" size="lg" className="shadow-md hover:shadow-lg transition-shadow">
-            <Link href="/contact">
-              Get In Touch
-            </Link>
-          </Button>
+        <div 
+          className="p-6 rounded-lg bg-gradient-to-br from-primary/10 via-secondary/5 to-transparent shadow-lg"
+        >
+          <p className="mb-8 text-lg text-muted-foreground">
+            Craft and showcase your professional journey. Display your projects, skills, and bio with elegance and clarity. Let FolioForge help you make a lasting impression.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-start items-start sm:items-center gap-4">
+            <Button asChild size="lg" className="shadow-md hover:shadow-lg transition-shadow">
+              <Link href="/projects">
+                View My Work <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="shadow-md hover:shadow-lg transition-shadow">
+              <Link href="/contact">
+                Get In Touch
+              </Link>
+            </Button>
+          </div>
         </div>
       </div>
 
@@ -57,4 +77,3 @@ export default function HomePage() {
     </div>
   );
 }
-
