@@ -10,14 +10,14 @@ export default function HomePage() {
       <div className="w-full px-4 py-8 sm:px-6 md:px-8">
         <ScrollingName name="Derrick Obeng" />
         
-        <div className="max-w-2xl mx-auto mt-8 p-6">
+        <div className="max-w-2xl mx-auto mt-8 text-right bg-gradient-to-l from-primary/10 via-secondary/10 to-background p-8 rounded-xl shadow-xl">
           <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl mb-6">
             Hello, welcome to my portfolio
           </h2>
           <p className="mb-8 text-lg text-muted-foreground">
             Craft and showcase your professional journey. Display your projects, skills, and bio with elegance and clarity. Let FolioForge help you make a lasting impression.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-end items-end sm:items-center gap-4">
             <Button asChild size="lg" className="shadow-md hover:shadow-lg transition-shadow">
               <Link href="/projects">
                 View My Work <ArrowRight className="ml-2 h-5 w-5" />
