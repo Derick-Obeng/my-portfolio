@@ -1,5 +1,7 @@
+
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Youtube } from 'lucide-react'; // Or PlayCircle if you prefer
 
 export default function AboutPage() {
   return (
@@ -53,6 +55,29 @@ export default function AboutPage() {
           </div>
         </div>
       </Card>
+
+      <section className="space-y-6 text-center">
+        <h2 className="text-3xl font-semibold tracking-tight text-primary">
+          A Little More About Me
+        </h2>
+        <div className="max-w-3xl mx-auto bg-card p-6 sm:p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <p className="text-lg text-muted-foreground mb-6">
+            Here you can watch a short video to get to know me and my work better.
+          </p>
+          <div 
+            className="aspect-video w-full max-w-2xl mx-auto bg-muted/50 rounded-lg flex items-center justify-center shadow-inner border border-border"
+            aria-label="Video placeholder"
+            role="img"
+            data-ai-hint="video player interface"
+          >
+            <Youtube className="h-16 w-16 text-primary/70 sm:h-20 sm:w-20" strokeWidth={1.5} />
+          </div>
+          <p className="mt-4 text-sm text-muted-foreground">
+            (YouTube video will be embedded here)
+          </p>
+        </div>
+      </section>
+
     </div>
   );
 }
