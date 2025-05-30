@@ -6,19 +6,21 @@ import { ArrowRight } from "lucide-react";
 
 export default function HomePage() {
   return (
-    <div className="flex flex-1 flex-col items-center justify-center relative"> {/* Added relative positioning */}
+    <div className="flex flex-1 flex-col items-center justify-center relative">
+      
+      <p className="text-lg text-muted-foreground mb-4 text-center">
+        Hello, welcome to my portfolio
+      </p>
+
       <div className="text-center">
         <ScrollingName name="Derrick Obeng" />
       </div>
       
-      <div className="max-w-2xl mx-auto mt-8 text-left p-6 rounded-xl bg-gradient-to-br from-primary/10 via-secondary/5 to-transparent dark:from-primary/20 dark:via-secondary/10 dark:to-transparent">
-        <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl mb-6">
-          Hello, welcome to my portfolio
-        </h2>
+      <div className="max-w-2xl mx-auto mt-8 text-center">
         <p className="mb-8 text-lg text-muted-foreground">
           Craft and showcase your professional journey. Display your projects, skills, and bio with elegance and clarity. Let FolioForge help you make a lasting impression.
         </p>
-        <div className="flex flex-col sm:flex-row justify-start items-start sm:items-center gap-4">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
           <Button asChild size="lg" className="shadow-md hover:shadow-lg transition-shadow">
             <Link href="/projects">
               View My Work <ArrowRight className="ml-2 h-5 w-5" />
@@ -47,3 +49,4 @@ export default function HomePage() {
     </div>
   );
 }
+
