@@ -1,4 +1,5 @@
 
+
 import { Button } from "@/components/ui/button";
 import { ScrollingName } from "@/components/home/ScrollingName";
 import Link from "next/link";
@@ -7,16 +8,16 @@ import { ArrowRight } from "lucide-react";
 export default function HomePage() {
   return (
     <div className="flex flex-1 flex-col relative py-8 md:py-12">
-      {/* Fading Graph Lines Effect - Top Left (New) */}
+      {/* Fading Graph Lines Effect - Top Left */}
       <div className="absolute top-4 left-4 md:top-8 md:left-8 w-32 h-32 md:w-40 md:h-40 pointer-events-none opacity-50">
         <svg width="100%" height="100%" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="lineFadeGradientLeft" x1="100%" y1="100%" x2="0%" y2="0%">
-              <stop offset="0%" stopColor="currentColor" stopOpacity="0.7"/>
+              <stop offset="0%" stopColor="currentColor" stopOpacity="1"/> {/* Increased opacity */}
               <stop offset="100%" stopColor="currentColor" stopOpacity="0"/>
             </linearGradient>
             <linearGradient id="lineFadeGradientRight" x1="0%" y1="100%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="currentColor" stopOpacity="0.7"/>
+              <stop offset="0%" stopColor="currentColor" stopOpacity="1"/> {/* Increased opacity */}
               <stop offset="100%" stopColor="currentColor" stopOpacity="0"/>
             </linearGradient>
           </defs>
@@ -55,8 +56,8 @@ export default function HomePage() {
       
       <div 
         className="w-full max-w-2xl mx-auto mt-8 text-left p-6 
-                   bg-gradient-to-br from-primary/5 via-secondary/2 to-transparent/0
-                   dark:from-primary/10 dark:via-secondary/5"
+                   bg-gradient-to-br from-primary/5 via-secondary/10 to-transparent
+                   dark:from-primary/10 dark:via-secondary/15"
       >
         <p className="mb-8 text-lg text-muted-foreground">
           Craft and showcase your professional journey. Display your projects, skills, and bio with elegance and clarity. Let FolioForge help you make a lasting impression.

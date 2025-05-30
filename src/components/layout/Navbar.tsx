@@ -52,7 +52,7 @@ export function Navbar() {
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
           <Link href="/" className="flex items-center gap-2 text-xl font-bold text-primary">
             <CodeXml className="h-7 w-7" />
-            <span>FolioForge</span>
+            <span>drick</span>
           </Link>
           <div className="h-8 w-24 rounded-md bg-muted animate-pulse" /> {/* Skeleton for nav items */}
         </div>
@@ -66,7 +66,7 @@ export function Navbar() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2 text-xl font-bold text-primary">
           <CodeXml className="h-7 w-7" />
-          <span>FolioForge</span>
+          <span>drick</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -87,7 +87,7 @@ export function Navbar() {
               <div className="mb-6 flex items-center justify-between">
                 <Link href="/" className="flex items-center gap-2 text-lg font-bold text-primary" onClick={() => setIsMobileMenuOpen(false)}>
                   <CodeXml className="h-6 w-6" />
-                  <span>FolioForge</span>
+                  <span>drick</span>
                 </Link>
                 <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
                   <X className="h-6 w-6" />
