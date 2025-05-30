@@ -6,7 +6,7 @@ import { Montserrat } from 'next/font/google';
 
 // Initialize Montserrat Black (900 weight) for a bold appearance
 const montserratBlack = Montserrat({
-  subsets: ['latin'],
+ // subsets: ['latin'],
   weight: '900',
 });
 

@@ -1,68 +1,98 @@
-import { SkillItem } from '@/components/skills/SkillItem';
-import { Code, Database, Cloud, Palette, Search, Briefcase, LucideIcon } from 'lucide-react'; // Added more icons
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 
 interface Skill {
   name: string;
-  proficiency: number;
-  Icon?: LucideIcon;
   category: string;
 }
 
+// Updated skillsData: removed proficiency and Icon
 const skillsData: Skill[] = [
   // Programming Languages
-  { name: 'JavaScript', proficiency: 95, Icon: Code, category: 'Languages' },
-  { name: 'TypeScript', proficiency: 90, Icon: Code, category: 'Languages' },
-  { name: 'Python', proficiency: 80, Icon: Code, category: 'Languages' },
-  { name: 'HTML5', proficiency: 98, Icon: Code, category: 'Languages' },
-  { name: 'CSS3', proficiency: 95, Icon: Code, category: 'Languages' },
+  { name: 'JavaScript', category: 'Languages' },
+  { name: 'TypeScript', category: 'Languages' },
+  { name: 'Python', category: 'Languages' },
+  { name: 'HTML5', category: 'Languages' },
+  { name: 'CSS3', category: 'Languages' },
+  { name: 'SQL', category: 'Languages' },
 
   // Frontend Frameworks/Libraries
-  { name: 'React', proficiency: 95, Icon: Code, category: 'Frontend' },
-  { name: 'Next.js', proficiency: 92, Icon: Code, category: 'Frontend' },
-  { name: 'Vue.js', proficiency: 75, Icon: Code, category: 'Frontend' },
-  { name: 'Tailwind CSS', proficiency: 90, Icon: Palette, category: 'Frontend' },
+  { name: 'React', category: 'Frontend' },
+  { name: 'Next.js', category: 'Frontend' },
+  { name: 'Vue.js', category: 'Frontend' },
+  { name: 'Tailwind CSS', category: 'Frontend' },
   
   // Backend Technologies
-  { name: 'Node.js', proficiency: 88, Icon: Code, category: 'Backend' },
-  { name: 'Express.js', proficiency: 85, Icon: Code, category: 'Backend' },
-  { name: 'Firebase', proficiency: 80, Icon: Cloud, category: 'Backend' },
+  { name: 'Node.js', category: 'Backend' },
+  { name: 'Express.js', category: 'Backend' },
+  { name: 'Firebase', category: 'Backend' }, // Firebase can be backend/DB, user has it in Backend
   
   // Databases
-  { name: 'MongoDB', proficiency: 82, Icon: Database, category: 'Databases' },
-  { name: 'PostgreSQL', proficiency: 78, Icon: Database, category: 'Databases' },
-  { name: 'SQL', proficiency: 85, Icon: Database, category: 'Databases' },
+  { name: 'MongoDB', category: 'Databases' },
+  { name: 'PostgreSQL', category: 'Databases' },
 
   // Tools & Platforms
-  { name: 'Git & GitHub', proficiency: 95, Icon: Briefcase, category: 'Tools' },
-  { name: 'Docker', proficiency: 70, Icon: Briefcase, category: 'Tools' },
-  { name: 'AWS Basics', proficiency: 65, Icon: Cloud, category: 'Tools' },
+  { name: 'Git & GitHub', category: 'Tools' },
+  { name: 'Docker', category: 'Tools' },
+  { name: 'AWS Basics', category: 'Tools' },
 
-  // Other Skills
-  { name: 'RESTful APIs', proficiency: 90, Icon: Search, category: 'Concepts' },
-  { name: 'Agile Methodologies', proficiency: 85, Icon: Briefcase, category: 'Concepts' },
-  { name: 'UI/UX Principles', proficiency: 75, Icon: Palette, category: 'Concepts' },
+  // Other Skills / Concepts
+  { name: 'RESTful APIs', category: 'Concepts' },
+  { name: 'Agile Methodologies', category: 'Concepts' },
+  { name: 'UI/UX Principles', category: 'Concepts' },
 ];
 
-const categories = Array.from(new Set(skillsData.map(skill => skill.category)));
+const categoryOrder = [
+  'Languages',
+  'Frontend',
+  'Backend',
+  'Databases',
+  'Tools',
+  'Concepts',
+];
+
+const categoryDisplayNames: Record<string, string> = {
+  Languages: 'Programming Languages & Core',
+  Frontend: 'Frontend',
+  Backend: 'Backend & Frameworks',
+  Databases: 'Databases',
+  Tools: 'Dev Tools & Other Technologies',
+  Concepts: 'Concepts & Methodologies',
+};
+
 
 export default function SkillsPage() {
+  const categories = categoryOrder.filter(cat => skillsData.some(skill => skill.category === cat));
+
   return (
     <div className="space-y-12">
       <header className="text-center">
         <h1 className="text-4xl font-bold tracking-tight text-primary sm:text-5xl">My Skills</h1>
-        <p className="mt-3 text-xl text-muted-foreground">A Breakdown of My Technical Proficiencies</p>
+        <p className="mt-3 text-xl text-muted-foreground">A Showcase of My Technical Expertise</p>
       </header>
       
-      {categories.map(category => (
-        <section key={category}>
-          <h2 className="text-3xl font-semibold text-foreground mb-6 pb-2 border-b border-primary/30">{category}</h2>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {skillsData.filter(skill => skill.category === category).map((skill) => (
-              <SkillItem key={skill.name} {...skill} />
-            ))}
-          </div>
-        </section>
-      ))}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {categories.map(category => (
+          <Card key={category} className="shadow-lg flex flex-col">
+            <CardHeader>
+              <CardTitle className="text-2xl text-primary">{categoryDisplayNames[category] || category}</CardTitle>
+            </CardHeader>
+            <CardContent className="flex flex-wrap gap-2 flex-grow">
+              {skillsData
+                .filter(skill => skill.category === category)
+                .map((skill) => (
+                  <Badge 
+                    key={skill.name} 
+                    variant="secondary" 
+                    className="px-3 py-1.5 text-sm rounded-md"
+                  >
+                    {skill.name}
+                  </Badge>
+                ))}
+            </CardContent>
+          </Card>
+        ))}
+      </div>
     </div>
   );
 }

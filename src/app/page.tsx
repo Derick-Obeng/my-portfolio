@@ -21,18 +21,18 @@ export default function HomePage() {
             </linearGradient>
           </defs>
           {/* Vertical Lines */}
-          <line x1="30" y1="10" x2="30" y2="290" stroke="url(#lineFadeGradientLeft)" strokeWidth="2" className="text-primary"/>
-          <line x1="70" y1="10" x2="70" y2="290" stroke="url(#lineFadeGradientLeft)" strokeWidth="1.5" className="text-accent"/>
-          <line x1="110" y1="10" x2="110" y2="290" stroke="url(#lineFadeGradientLeft)" strokeWidth="2" className="text-primary"/>
+          <line x1="50" y1="190" x2="130" y2="290" stroke="url(#lineFadeGradientLeft)" strokeWidth="2" className="text-primary"/>
+          <line x1="80" y1="190" x2="170" y2="290" stroke="url(#lineFadeGradientLeft)" strokeWidth="1.5" className="text-accent"/>
+          <line x1="110" y1="190" x2="110" y2="290" stroke="url(#lineFadeGradientLeft)" strokeWidth="2" className="text-primary"/>
           
           {/* Horizontal Lines */}
-          <line x1="10" y1="30" x2="140" y2="30" stroke="url(#lineFadeGradientLeft)" strokeWidth="2" className="text-accent"/>
-          <line x1="10" y1="70" x2="140" y2="70" stroke="url(#lineFadeGradientLeft)" strokeWidth="1.5" className="text-primary"/>
-          <line x1="10" y1="110" x2="140" y2="110" stroke="url(#lineFadeGradientLeft)" strokeWidth="2" className="text-accent"/>
-          <line x1="10" y1="150" x2="140" y2="150" stroke="url(#lineFadeGradientLeft)" strokeWidth="1.5" className="text-primary"/>
-          <line x1="10" y1="190" x2="140" y2="190" stroke="url(#lineFadeGradientLeft)" strokeWidth="2" className="text-accent"/>
-          <line x1="10" y1="230" x2="140" y2="230" stroke="url(#lineFadeGradientLeft)" strokeWidth="1.5" className="text-primary"/>
-          <line x1="10" y1="270" x2="140" y2="270" stroke="url(#lineFadeGradientLeft)" strokeWidth="2" className="text-accent"/>
+          <line x1="50" y1="30" x2="140" y2="30" stroke="url(#lineFadeGradientLeft)" strokeWidth="2" className="text-accent"/>
+          <line x1="80" y1="70" x2="140" y2="70" stroke="url(#lineFadeGradientLeft)" strokeWidth="1.5" className="text-primary"/>
+          <line x1="110" y1="110" x2="140" y2="110" stroke="url(#lineFadeGradientLeft)" strokeWidth="2" className="text-accent"/>
+          <line x1="130" y1="150" x2="140" y2="150" stroke="url(#lineFadeGradientLeft)" strokeWidth="1.5" className="text-primary"/>
+          <line x1="50" y1="190" x2="140" y2="190" stroke="url(#lineFadeGradientLeft)" strokeWidth="2" className="text-accent"/>
+          <line x1="80" y1="230" x2="140" y2="230" stroke="url(#lineFadeGradientLeft)" strokeWidth="1.5" className="text-primary"/>
+          <line x1="110" y1="270" x2="140" y2="270" stroke="url(#lineFadeGradientLeft)" strokeWidth="2" className="text-accent"/>
         </svg>
       </div>
 
@@ -63,7 +63,7 @@ export default function HomePage() {
                    dark:from-primary/20 dark:via-transparent"
       >
         <p className="mb-8 text-lg text-muted-foreground">
-          Craft and showcase your professional journey. Display your projects, skills, and bio with elegance and clarity. Let FolioForge help you make a lasting impression.
+           I build, craft , user-centric systems that automate workflows, enhance predictive capabilities, and turn data into meaningful decisions. 
         </p>
         <div className="flex flex-col sm:flex-row justify-start items-start sm:items-center gap-4">
           <Button asChild size="lg" className="shadow-md hover:shadow-lg transition-shadow">
