@@ -1,5 +1,4 @@
 
-
 import { Button } from "@/components/ui/button";
 import { ScrollingName } from "@/components/home/ScrollingName";
 import Link from "next/link";
@@ -13,23 +12,23 @@ export default function HomePage() {
         <svg width="100%" height="100%" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="lineFadeGradientLeft" x1="100%" y1="100%" x2="0%" y2="0%">
-              <stop offset="0%" stopColor="currentColor" stopOpacity="1"/> {/* Increased opacity */}
+              <stop offset="0%" stopColor="currentColor" stopOpacity="1"/> 
               <stop offset="100%" stopColor="currentColor" stopOpacity="0"/>
             </linearGradient>
             <linearGradient id="lineFadeGradientRight" x1="0%" y1="100%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="currentColor" stopOpacity="1"/> {/* Increased opacity */}
+              <stop offset="0%" stopColor="currentColor" stopOpacity="1"/>
               <stop offset="100%" stopColor="currentColor" stopOpacity="0"/>
             </linearGradient>
           </defs>
           {/* Vertical Lines */}
           <line x1="30" y1="10" x2="30" y2="140" stroke="url(#lineFadeGradientLeft)" strokeWidth="1.5" className="text-primary"/>
-          <line x1="70" y1="10" x2="70" y2="140" stroke="url(#lineFadeGradientLeft)" strokeWidth="1" className="text-accent opacity-80"/>
-          <line x1="110" y1="10" x2="110" y2="140" stroke="url(#lineFadeGradientLeft)" strokeWidth="1.5" className="text-primary opacity-90"/>
+          <line x1="70" y1="10" x2="70" y2="140" stroke="url(#lineFadeGradientLeft)" strokeWidth="1" className="text-accent"/>
+          <line x1="110" y1="10" x2="110" y2="140" stroke="url(#lineFadeGradientLeft)" strokeWidth="1.5" className="text-primary"/>
           
           {/* Horizontal Lines */}
           <line x1="10" y1="30" x2="140" y2="30" stroke="url(#lineFadeGradientLeft)" strokeWidth="1.5" className="text-accent"/>
-          <line x1="10" y1="70" x2="140" y2="70" stroke="url(#lineFadeGradientLeft)" strokeWidth="1" className="text-primary opacity-80"/>
-          <line x1="10" y1="110" x2="140" y2="110" stroke="url(#lineFadeGradientLeft)" strokeWidth="1.5" className="text-accent opacity-90"/>
+          <line x1="10" y1="70" x2="140" y2="70" stroke="url(#lineFadeGradientLeft)" strokeWidth="1" className="text-primary"/>
+          <line x1="10" y1="110" x2="140" y2="110" stroke="url(#lineFadeGradientLeft)" strokeWidth="1.5" className="text-accent"/>
         </svg>
       </div>
 
@@ -39,8 +38,8 @@ export default function HomePage() {
           {/* Using the existing lineFadeGradientRight definition */}
           <line x1="50" y1="190" x2="190" y2="50" stroke="url(#lineFadeGradientRight)" strokeWidth="2.5" className="text-primary"/>
           <line x1="80" y1="190" x2="180" y2="80" stroke="url(#lineFadeGradientRight)" strokeWidth="1.5" className="text-accent"/>
-          <line x1="110" y1="190" x2="170" y2="110" stroke="url(#lineFadeGradientRight)" strokeWidth="2" className="text-primary opacity-90"/>
-          <line x1="130" y1="190" x2="160" y2="150" stroke="url(#lineFadeGradientRight)" strokeWidth="1" className="text-accent opacity-80"/>
+          <line x1="110" y1="190" x2="170" y2="110" stroke="url(#lineFadeGradientRight)" strokeWidth="2" className="text-primary"/>
+          <line x1="130" y1="190" x2="160" y2="150" stroke="url(#lineFadeGradientRight)" strokeWidth="1" className="text-accent"/>
         </svg>
       </div>
 
