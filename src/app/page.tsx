@@ -7,20 +7,39 @@ import { ArrowRight } from "lucide-react";
 export default function HomePage() {
   return (
     <div className="flex flex-1 flex-col relative py-8 md:py-12">
-      {/* Fading Graph Lines Effect - Top Right */}
-      <div className="absolute top-4 right-4 md:top-8 md:right-8 w-48 h-48 pointer-events-none opacity-60">
-        <svg width="100%" height="100%" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Fading Graph Lines Effect - Top Left (New) */}
+      <div className="absolute top-4 left-4 md:top-8 md:left-8 w-32 h-32 md:w-40 md:h-40 pointer-events-none opacity-50">
+        <svg width="100%" height="100%" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <linearGradient id="lineFadeGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+            <linearGradient id="lineFadeGradientLeft" x1="100%" y1="100%" x2="0%" y2="0%">
+              <stop offset="0%" stopColor="currentColor" stopOpacity="0.7"/>
+              <stop offset="100%" stopColor="currentColor" stopOpacity="0"/>
+            </linearGradient>
+            <linearGradient id="lineFadeGradientRight" x1="0%" y1="100%" x2="100%" y2="0%">
               <stop offset="0%" stopColor="currentColor" stopOpacity="0.7"/>
               <stop offset="100%" stopColor="currentColor" stopOpacity="0"/>
             </linearGradient>
           </defs>
+          {/* Vertical Lines */}
+          <line x1="30" y1="10" x2="30" y2="140" stroke="url(#lineFadeGradientLeft)" strokeWidth="1.5" className="text-primary"/>
+          <line x1="70" y1="10" x2="70" y2="140" stroke="url(#lineFadeGradientLeft)" strokeWidth="1" className="text-accent opacity-80"/>
+          <line x1="110" y1="10" x2="110" y2="140" stroke="url(#lineFadeGradientLeft)" strokeWidth="1.5" className="text-primary opacity-90"/>
           
-          <line x1="50" y1="190" x2="190" y2="50" stroke="url(#lineFadeGradient)" strokeWidth="2.5" className="text-primary"/>
-          <line x1="80" y1="190" x2="180" y2="80" stroke="url(#lineFadeGradient)" strokeWidth="1.5" className="text-accent"/>
-          <line x1="110" y1="190" x2="170" y2="110" stroke="url(#lineFadeGradient)" strokeWidth="2" className="text-primary opacity-90"/>
-          <line x1="130" y1="190" x2="160" y2="150" stroke="url(#lineFadeGradient)" strokeWidth="1" className="text-accent opacity-80"/>
+          {/* Horizontal Lines */}
+          <line x1="10" y1="30" x2="140" y2="30" stroke="url(#lineFadeGradientLeft)" strokeWidth="1.5" className="text-accent"/>
+          <line x1="10" y1="70" x2="140" y2="70" stroke="url(#lineFadeGradientLeft)" strokeWidth="1" className="text-primary opacity-80"/>
+          <line x1="10" y1="110" x2="140" y2="110" stroke="url(#lineFadeGradientLeft)" strokeWidth="1.5" className="text-accent opacity-90"/>
+        </svg>
+      </div>
+
+      {/* Fading Graph Lines Effect - Top Right */}
+      <div className="absolute top-4 right-4 md:top-8 md:right-8 w-48 h-48 pointer-events-none opacity-60">
+        <svg width="100%" height="100%" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          {/* Using the existing lineFadeGradientRight definition */}
+          <line x1="50" y1="190" x2="190" y2="50" stroke="url(#lineFadeGradientRight)" strokeWidth="2.5" className="text-primary"/>
+          <line x1="80" y1="190" x2="180" y2="80" stroke="url(#lineFadeGradientRight)" strokeWidth="1.5" className="text-accent"/>
+          <line x1="110" y1="190" x2="170" y2="110" stroke="url(#lineFadeGradientRight)" strokeWidth="2" className="text-primary opacity-90"/>
+          <line x1="130" y1="190" x2="160" y2="150" stroke="url(#lineFadeGradientRight)" strokeWidth="1" className="text-accent opacity-80"/>
         </svg>
       </div>
 
@@ -34,7 +53,6 @@ export default function HomePage() {
         <ScrollingName name="Derrick Obeng" />
       </div>
       
-      {/* Updated section with splash background, card appearance removed */}
       <div 
         className="w-full max-w-2xl mx-auto mt-8 text-left p-6 
                    bg-gradient-to-br from-primary/5 via-secondary/2 to-transparent/0
