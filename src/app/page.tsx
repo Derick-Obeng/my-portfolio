@@ -5,9 +5,9 @@ import { ArrowRight } from "lucide-react";
 
 export default function HomePage() {
   return (
-    <div className="relative flex flex-1 flex-col items-center justify-center text-center -mx-4 -my-8 sm:-mx-6 md:-mx-8">
-      <div className="absolute inset-0 animated-gradient-background -z-10 opacity-75"></div>
-      <div className="relative z-0 px-4 py-8 sm:px-6 md:px-8 w-full">
+    <div className="flex flex-1 flex-col items-center justify-center text-center">
+      {/* Removed the animated-gradient-background div and negative margins from the parent div */}
+      <div className="w-full px-4 py-8 sm:px-6 md:px-8">
         <ScrollingName name="Derrick Obeng" />
         
         <div className="max-w-2xl mx-auto mt-8 p-6 bg-card/25 dark:bg-card/25 backdrop-blur-md rounded-xl shadow-2xl border border-white/20 dark:border-white/10">

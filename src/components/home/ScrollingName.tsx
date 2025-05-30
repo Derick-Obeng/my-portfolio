@@ -25,15 +25,22 @@ export function ScrollingName({ name }: ScrollingNameProps) {
   const firstName = nameParts[0] || '';
   const lastName = nameParts.slice(1).join(' ') || '';
 
+  const nameContent = (
+    <>
+      <span className="text-primary"> • </span>
+      <span className="text-primary">{firstName}</span>
+      {lastName && <span className="text-primary">&nbsp;{lastName}</span>}
+      <span className="text-primary"> • </span>
+    </>
+  );
+
   // Fallback for SSR or initial render to avoid layout shift / hydration mismatch
   // Applies Montserrat font and new structure for accurate space reservation.
   if (!isMounted) {
     return (
       <div className="scrolling-text-container py-4 md:py-8">
         <h1 className={`${montserratBlack.className} text-5xl md:text-7xl lg:text-8xl tracking-tight opacity-0`}>
-          <span className="text-primary"> • </span>
-          <span className="text-primary">{firstName}</span>
-          {lastName && <span className="text-primary">&nbsp;{lastName}</span>}
+          {nameContent}
         </h1>
       </div>
     );
@@ -42,9 +49,7 @@ export function ScrollingName({ name }: ScrollingNameProps) {
   return (
     <div className="scrolling-text-container py-4 md:py-8">
       <h1 className={`scrolling-text ${montserratBlack.className} text-5xl md:text-7xl lg:text-8xl tracking-tight`}>
-        <span className="text-primary"> • </span>
-        <span className="text-primary">{firstName}</span>
-        {lastName && <span className="text-primary">&nbsp;{lastName}</span>}
+        {nameContent}
       </h1>
     </div>
   );
