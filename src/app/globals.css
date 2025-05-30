@@ -133,3 +133,28 @@
     transform: translateX(-100%);
   }
 }
+
+/* Animated Gradient Background for Homepage */
+.animated-gradient-background {
+  background: linear-gradient(
+    -45deg,
+    hsl(281, 50%, 92%), /* Lighter background */
+    hsl(275, 60%, 88%), /* Lighter secondary */
+    hsl(290, 70%, 90%), /* Pinkish light lavender */
+    hsl(270, 65%, 91%)  /* Bluish light lavender */
+  );
+  background-size: 250% 250%; /* Adjusted for more subtle shifts with close colors */
+  animation: gradientBG 20s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

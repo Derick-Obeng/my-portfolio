@@ -27,7 +27,7 @@ export function ScrollingName({ name }: ScrollingNameProps) {
   return (
     <div className="scrolling-text-container py-4 md:py-8">
       <h1 className="scrolling-text text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-primary">
-        {name} &nbsp; • &nbsp; {name} &nbsp; • &nbsp;
+        {name} &nbsp; • &nbsp;
       </h1>
     </div>
   );
