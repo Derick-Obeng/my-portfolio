@@ -68,7 +68,7 @@ export default function SkillsPage() {
     <div className="space-y-12">
       <header className="text-center">
         <h1 className="text-4xl font-bold tracking-tight text-primary sm:text-5xl">My Skills</h1>
-        <p className="mt-3 text-xl text-muted-foreground">A Showcase of My Technical Expertise</p>
+        <p className="mt-3 text-xl text-muted-foreground">Tech stacks</p>
       </header>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

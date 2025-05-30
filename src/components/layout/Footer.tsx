@@ -1,6 +1,6 @@
 
 import Link from 'next/link';
-import { Twitter, Phone, Mail, Linkedin, Github } from 'lucide-react';
+import { X, Phone, Mail, Linkedin, Github } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export function Footer() {
@@ -28,12 +28,12 @@ export function Footer() {
             </Link>
           </Button>
           <Button variant="ghost" size="icon" asChild aria-label="Derrick Obeng on X (Twitter)">
-            <Link href="https://x.com/yourprofile" target="_blank" rel="noopener noreferrer">
-              <Twitter className="h-5 w-5" />
+            <Link href="https://x.com/drick_dd?s=21&t=WV2GRhZdkS3m9BTRL3nD9Q" target="_blank" rel="noopener noreferrer">
+              <X className="h-5 w-5" />
             </Link>
           </Button>
           <Button variant="ghost" size="icon" asChild aria-label="Call Derrick Obeng">
-            <Link href="tel:+1234567890">
+            <Link href="tel:+233593231286">
               <Phone className="h-5 w-5" />
             </Link>
           </Button>

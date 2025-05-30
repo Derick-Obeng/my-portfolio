@@ -1,6 +1,7 @@
+
 import { ContactForm } from '@/components/contact/ContactForm';
 import { Button } from '@/components/ui/button';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { X,Github,Phone, Linkedin, Mail } from 'lucide-react';
 import Link from 'next/link';
 
 export default function ContactPage() {
@@ -29,6 +30,16 @@ export default function ContactPage() {
           <Button variant="outline" size="icon" asChild>
             <Link href="https://github.com/Derick-Obeng" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <Github className="h-5 w-5" />
+            </Link>
+          </Button>
+          <Button variant="outline" size="icon" asChild>
+            <Link href="https://x.com/drick_dd?s=21&t=WV2GRhZdkS3m9BTRL3nD9Q" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+              <X className="h-5 w-5" />
+            </Link>
+          </Button>
+          <Button variant="outline" size="icon" asChild>
+            <Link href="tel:+233593231286" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <Phone className="h-5 w-5" />
             </Link>
           </Button>
         </div>

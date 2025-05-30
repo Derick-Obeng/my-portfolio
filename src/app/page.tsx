@@ -16,21 +16,21 @@ export default function HomePage() {
               <stop offset="100%" stopColor="currentColor" stopOpacity="0"/>
             </linearGradient>
             <linearGradient id="lineFadeGradientRight" x1="0%" y1="100%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="currentColor" stopOpacity="1"/>
-              <stop offset="100%" stopColor="currentColor" stopOpacity="0"/>
+              <stop offset="100%" stopColor="currentColor" stopOpacity="1"/>
+              <stop offset="100%" stopColor="currentColor" stopOpacity="1"/>
             </linearGradient>
           </defs>
           {/* Vertical Lines */}
-          <line x1="50" y1="190" x2="130" y2="290" stroke="url(#lineFadeGradientLeft)" strokeWidth="2" className="text-primary"/>
+          <line x1="120" y1="190" x2="130" y2="290" stroke="url(#lineFadeGradientLeft)" strokeWidth="2" className="text-primary"/>
           <line x1="80" y1="190" x2="170" y2="290" stroke="url(#lineFadeGradientLeft)" strokeWidth="1.5" className="text-accent"/>
           <line x1="110" y1="190" x2="110" y2="290" stroke="url(#lineFadeGradientLeft)" strokeWidth="2" className="text-primary"/>
           
           {/* Horizontal Lines */}
-          <line x1="50" y1="30" x2="140" y2="30" stroke="url(#lineFadeGradientLeft)" strokeWidth="2" className="text-accent"/>
+          <line x1="80" y1="90" x2="140" y2="70" stroke="url(#lineFadeGradientLeft)" strokeWidth="2" className="text-accent"/>
           <line x1="80" y1="70" x2="140" y2="70" stroke="url(#lineFadeGradientLeft)" strokeWidth="1.5" className="text-primary"/>
           <line x1="110" y1="110" x2="140" y2="110" stroke="url(#lineFadeGradientLeft)" strokeWidth="2" className="text-accent"/>
           <line x1="130" y1="150" x2="140" y2="150" stroke="url(#lineFadeGradientLeft)" strokeWidth="1.5" className="text-primary"/>
-          <line x1="50" y1="190" x2="140" y2="190" stroke="url(#lineFadeGradientLeft)" strokeWidth="2" className="text-accent"/>
+          <line x1="90" y1="190" x2="140" y2="190" stroke="url(#lineFadeGradientLeft)" strokeWidth="2" className="text-accent"/>
           <line x1="80" y1="230" x2="140" y2="230" stroke="url(#lineFadeGradientLeft)" strokeWidth="1.5" className="text-primary"/>
           <line x1="110" y1="270" x2="140" y2="270" stroke="url(#lineFadeGradientLeft)" strokeWidth="2" className="text-accent"/>
         </svg>
